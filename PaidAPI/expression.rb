@@ -17,6 +17,10 @@ class Expression
   # but there's no "rsplit" so I could reverse the string and split, or do all the splits at
   # once and reassemble... and I have 5 minutes left.
 
+  # What I should have done is, instead of splitting the string piecemeal, split the whole
+  # thing into tokens. Then I could have made unary minus a token, and dealt with the
+  # order and precedence issues separate from the splitting process.
+
   # Assuming n is the length of the string:
 
   # string.split is O(n) (for short RE's). If I split the string equally the runtime would be O(n log(n)).
