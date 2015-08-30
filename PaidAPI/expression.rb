@@ -6,7 +6,16 @@ class Expression
     parse(string)
   end
 
-  # I can't handle unary minus properly yet. And chained operators 10/5/4 don't work yet.
+  # I can't handle unary minus properly yet.
+  # Unary minus needs precedence higher than * or / but binary minus is lower. I should use an RE
+  # to separate out the unary-minus integers - easily done, search for - with operator or ^ in
+  # front of it. But I'm running out of time, and my code structure would have to change.
+
+  # And chained operators 10/5/4 don't work yet.
+  # I should have thought through the order of evaluation before I started coding. The
+  # way I build the tree, 6-3-1 evaluates 3-1 first. I should start from the right hand side
+  # but there's no "rsplit" so I could reverse the string and split, or do all the splits at
+  # once and reassemble... and I have 5 minutes left.
 
   # Assuming n is the length of the string:
 
