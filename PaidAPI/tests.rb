@@ -1,8 +1,5 @@
-load 'expression.rb'
+load 'eval.rb'
 
-def value_of(string)
-  Expression.new(string).value
-end
 
 def test(str, number)
   result = value_of(str)
@@ -25,6 +22,11 @@ test('4*-5', -20)
 test('-4*5', -20)
 test('-4*-5', 20)
 test('10/5/4', 0.5)
+test('-3-4', -7)
+test('3*(-4*2)', -24)
+test('3*(-4*-2)', 24)
+test('3*(4+2)', 18)
+test('3*(4+2)/2', 9)
 
 
 puts "All tests completed."
